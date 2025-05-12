@@ -20,58 +20,15 @@
         <secret>mysecret</secret>
     </setup>
 
-    <permissions>
-    <!-- Products -->
-    <read>product</read>
-    <create>product</create>
-    <update>product</update>
-    <delete>product</delete>
-
-    <!-- Orders -->
-    <read>order</read>
-    <create>order</create>
-    <update>order</update>
-    <delete>order</delete>
-
-    <!-- Customers -->
-    <read>customer</read>
-    <create>customer</create>
-    <update>customer</update>
-    <delete>customer</delete>
-
-    <!-- Transactions & Captures (needed to see captures before refund) -->
-    <read>order_transaction</read>
-    <create>order_transaction</create>
-    <update>order_transaction</update>
-    <delete>order_transaction</delete>
-
-    <read>order_transaction_capture</read>
-    <create>order_transaction_capture</create>
-    <update>order_transaction_capture</update>
-    <delete>order_transaction_capture</delete>
-
-    <!-- Refunds -->
-    <read>order_transaction_capture_refund</read>
-    <create>order_transaction_capture_refund</create>
-    <update>order_transaction_capture_refund</update>
-    <delete>order_transaction_capture_refund</delete>
-
-    <!-- any non‑CRUD scope -->
-    <permission>system:cache:info</permission>
-  </permissions>
-
   <allowed-hosts>
     <host>host.docker.internal:8000</host>
-    <host>4e8c-27-147-202-185.ngrok-free.app</host>
     <host>127.0.0.1:8000</host>
 
   </allowed-hosts>
 
-
   <admin>
 
     <base-app-url>http://127.0.0.1:8000</base-app-url>
-
 
     <main-module source="http://127.0.0.1:8000/connect"/>
     
