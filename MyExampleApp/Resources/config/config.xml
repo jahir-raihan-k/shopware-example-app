@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/trunk/src/Core/System/SystemConfig/Schema/config.xsd">
+
+    <card>
+        <title>Minimal configuration</title>
+
+        <!-- Text field -->
+        <input-field>
+            <name>exampleText</name>
+            <type>text</type>
+            <label>Example Text</label>
+        </input-field>
+
+        <!-- Checkbox -->
+        <input-field>
+            <name>enableFeature</name>
+            <type>bool</type>
+            <label>Enable Feature</label>
+        </input-field>
+
+        <!-- Select field -->
+        <input-field>
+            <name>optionChoice</name>
+            <type>select</type>
+            <label>Choose an Option</label>
+            <options>
+                <option>
+                    <name>Option A</name>
+                    <value>a</value>
+                </option>
+                <option>
+                    <name>Option B</name>
+                    <value>b</value>
+                </option>
+            </options>
+        </input-field>
+
+        <!-- URL field -->
+        <input-field>
+            <name>iframeUrl</name>
+            <type>url</type>
+            <label>External Iframe URL</label>
+        </input-field>
+
+    </card>
+</config>

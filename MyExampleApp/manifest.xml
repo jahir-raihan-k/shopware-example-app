@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/trunk/src/Core/Framework/App/Manifest/Schema/manifest-2.0.xsd">
+    <meta>
+        <name>MyExampleApp</name>
+        <label>This is a app</label>
+        <label lang="de-DE">This is a app</label>
+        <description>A description</description>
+        <description lang="de-DE">Eine Beschreibung</description>
+        <author>Your Company Ltd.</author>
+        <copyright>(c) by KintSugi.</copyright>
+        <version>1.0.1</version>
+        <icon>Resources/config/dummy_icon.png</icon>
+        <license>MIT</license>
+    </meta>
+
+    <setup>
+        <!-- The URL which will be used for the registration -->
+        <registrationUrl>http://host.docker.internal:8000/registration</registrationUrl>
+        <!-- Dev only, the secret that is used to sign the registration request -->
+        <secret>mysecret</secret>
+    </setup>
+
+    <permissions>
+    <!-- Products -->
+    <read>product</read>
+    <create>product</create>
+    <update>product</update>
+    <delete>product</delete>
+
+    <!-- Orders -->
+    <read>order</read>
+    <create>order</create>
+    <update>order</update>
+    <delete>order</delete>
+
+    <!-- Customers -->
+    <read>customer</read>
+    <create>customer</create>
+    <update>customer</update>
+    <delete>customer</delete>
+
+    <!-- Transactions & Captures (needed to see captures before refund) -->
+    <read>order_transaction</read>
+    <create>order_transaction</create>
+    <update>order_transaction</update>
+    <delete>order_transaction</delete>
+
+    <read>order_transaction_capture</read>
+    <create>order_transaction_capture</create>
+    <update>order_transaction_capture</update>
+    <delete>order_transaction_capture</delete>
+
+    <!-- Refunds -->
+    <read>order_transaction_capture_refund</read>
+    <create>order_transaction_capture_refund</create>
+    <update>order_transaction_capture_refund</update>
+    <delete>order_transaction_capture_refund</delete>
+
+    <!-- any non‑CRUD scope -->
+    <permission>system:cache:info</permission>
+  </permissions>
+
+  <allowed-hosts>
+    <host>host.docker.internal:8000</host>
+    <host>4e8c-27-147-202-185.ngrok-free.app</host>
+    <host>127.0.0.1:8000</host>
+
+  </allowed-hosts>
+
+
+  <admin>
+
+    <base-app-url>http://127.0.0.1:8000</base-app-url>
+
+
+    <main-module source="http://127.0.0.1:8000/connect"/>
+    
+    <module name="myModules"
+      source="http://127.0.0.1:8000/connect"
+      parent="sw-extension"
+      position="50"
+    >
+        <label>KintSugi</label>
+        <label lang="de-DE">KintSugi</label>
+    </module>
+    
+  </admin>
+</manifest>
