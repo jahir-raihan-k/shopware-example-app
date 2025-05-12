@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/trunk/src/Core/Framework/App/Manifest/Schema/manifest-2.0.xsd">
-    <meta>
-        <name>MyExampleApp</name>
-        <label>This is a app</label>
-        <label lang="de-DE">This is a app</label>
-        <description>A description</description>
-        <description lang="de-DE">Eine Beschreibung</description>
-        <author>Your Company Ltd.</author>
-        <copyright>(c) by KintSugi.</copyright>
-        <version>1.0.1</version>
-        <icon>Resources/config/dummy_icon.png</icon>
-        <license>MIT</license>
-    </meta>
+  <meta>
+      <name>MyExampleApp</name>
+      <label>This is a app</label>
+      <label lang="de-DE">This is a app</label>
+      <description>A description</description>
+      <description lang="de-DE">Eine Beschreibung</description>
+      <author>Your Company Ltd.</author>
+      <copyright>(c) by KintSugi.</copyright>
+      <version>1.0.1</version>
+      <icon>Resources/config/dummy_icon.png</icon>
+      <license>MIT</license>
+  </meta>
 
-    <setup>
-        <!-- The URL which will be used for the registration -->
-        <registrationUrl>http://host.docker.internal:8000/registration</registrationUrl>
-        <!-- Dev only, the secret that is used to sign the registration request -->
-        <secret>mysecret</secret>
-    </setup>
+  <setup>
+      <!-- The URL which will be used for the registration -->
+      <registrationUrl>http://host.docker.internal:8000/registration</registrationUrl>
+      <!-- Dev only, the secret that is used to sign the registration request -->
+      <secret>mysecret</secret>
+  </setup>
 
   <allowed-hosts>
     <host>host.docker.internal:8000</host>
